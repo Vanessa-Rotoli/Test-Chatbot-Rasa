@@ -1,0 +1,33 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - Ei
+    - Olá
+    - Oi
+    - Olá
+    - bom Dia
+    - boa noite
+    - moin
+    - ei
+    - vamos
+    - ei cara
+    - bom Dia
+    - boa noite
+    - boa tarde
+
+- intent: goodbye
+  examples: |
+    - boa tarde
+    - Fui!
+    - bom por
+    - até mais tarde
+    - boa noite
+    - tchau
+    - adeus
+    - tenha um bom dia
+    - Vejo você por aí
+    - tchau tchau
+    - até logo
+

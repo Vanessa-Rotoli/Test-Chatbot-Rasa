@@ -1,0 +1,30 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+
+responses:
+  utter_ask_numero:
+  - text: "Olá! Digite um numero a ser verificado?"
+
+  utter_goodbye:
+  - text: "Fui!"
+
+forms:
+  numero_form:
+    required_slots:
+      numero:
+      - type: from_text 
+          
+slots:
+  numero:
+    type: text
+    influence_conversation: true
+
+actions:
+- validate_numero_form
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

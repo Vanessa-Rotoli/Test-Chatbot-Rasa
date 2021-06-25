@@ -1,0 +1,26 @@
+version: "2.0"
+
+rules:
+
+- rule: Inicia o bot e verifica se o numero é par ou impar.
+  steps:
+  - intent: greet
+  - action: numero_form
+  - active_loop: numero_form
+
+- rule: Fecha o loop do formulario.
+  condition:
+  - active_loop: numero_form
+  steps:
+  - action: numero_form 
+  - active_loop: null
+  - slot_was_set: 
+    - requested_slot: null
+  - action: validate_numero_form
+  - action: action_restart
+
+- rule: Finaliza o bot e diz Fui!
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
